@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>PushPull</title>
+</head>
+<body>
+    
+    
+
+
+
+    <main id="hero" class="hide">
+        <header id="header">
+            <div class="container">
+                <h1>PushPull</h1>
+            </div>
+        </header>
+        <div class="container">
+            <div class="col">
+                <img src="./assets/images/hero.jpg" class="hero-img">
+            </div>
+
+            <div class="col">
+                <article>
+                   
+                    <h2>Free Message to Cross Devices</h2>
+                    <p>
+                        You can send messages to cross devices width less effort
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut reprehenderit neque animi, fb magnam est quos minima
+                        placeat.
+                
+                    </p>
+                </article>
+                <div class="action">
+                    <button id="create-new-room" class="btn-prime btn-block">Create Room</button>
+                    <button id="join-room" class="btn-outline btn-block">Join Room</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+<!-- Chat room -->
+
+        <div id="chat-container" class="hide">
+            <!-- Chat Information -->
+            <section class="chat-info">
+                <header id="chat-header">
+                    <h1 class="brand"> PushPull</h1>
+                    <nav>
+                        <div class="share-container">
+                            <button class="nav-btn " data-title="Connect Other Devices" id="share-btn">
+                                <i class="icon-share"></i>
+                            </button>
+                            <!-- Share box -->
+                            <div class="share-box hide">
+                                <div id="qr-code"></div>
+                                <p>Scan the QR Code Or open this link with other devices that you want to connect</p>
+                                <div id="room-link">
+                                    <input type="text" readonly>
+                                    <button id="copy-link" data-title="Copy">
+                                        <i class="icon-copy"></i>
+                                    </button>
+                                </div>
+                                <h3 id="room-no"></h3>
+                                <small>People who use  this Code can enter to your room</small>
+                            </div> <!-- Share box -->
+    
+                        </div>
+                        <!-- Logout -->
+                        <button class="nav-btn" data-title="Logout from PushPull" id="logout-btn">
+                            <i class="icon-logout"></i>
+                        </button>
+                    </nav>
+                </header>
+
+                <!-- Active user in the room -->
+                <div id="active-clients"></div>
+    
+            </section>  <!-- Chat Information -->
+
+
+
+            <!-- Chat-room - -->
+            <section class="chat-room">
+                <div class="chat-room-container">
+                    <div id="chat-area"></div>
+                    <form class="chat-form">
+
+                        <div class="attach-files" data-title="File Upload" >
+                            <i class="icon-attach"></i>
+                            <input type="file" id="chat-file-upload">
+                        </div>
+                        <textarea id="chat-control" placeholder="Write your message here..."></textarea>
+
+                        <button id="btn-send">
+                            <i class="icon-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+
+
+<!-- Chat room -->
+
+
+
+<div class="overlay" id="join-room-popup">
+    <div class="popup">
+        <button class="pop-close">&times;</button>
+        <p>Join on the shared room </p>
+        <div class="input-group">
+            <input id="room-control" placeholder="Enter room key or link">
+            <button id="btn-join"  class="btn-prime btn-block" disabled>Join</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script type="text/javascript" src="./assets/js/download.min.js"></script>
+    <script src="./assets/js/qrcode.min.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+</body>
+</html>
